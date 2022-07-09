@@ -5,7 +5,7 @@ description = ""
 authors = ["Kimberly Jones <mathjones42@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 pandas = "^1.4.3"
 protobuf = "^4.21.2"
 
