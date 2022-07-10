@@ -31,5 +31,7 @@ jobs:
       run: poetry run black pandabuffers/ tests/ --check
     - name: Static typing
       run: poetry run mypy pandabuffers --strict
+    - name: Linting
+      run: poetry run flake8
     - name: Test with pytest
       run: poetry run pytest
