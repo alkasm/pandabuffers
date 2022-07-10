@@ -108,7 +108,7 @@ Nested repeated fields keep an index name for recursive joins:
 ```protobuf
 message Shift {
   repeated Person workers = 1;
-  string start_time = 2;
+  google.protobuf.Timestamp start_time = 2;
 }
 ```
 
@@ -135,3 +135,15 @@ message Shift {
 1 2       2022-07-11 21:00:00        eve     eve@www.com
   3       2022-07-11 21:00:00       fred            None
 ```
+
+
+shifts = [
+    {"workers": [
+        {"first_name": "alice", "emails": ["alice@www.com"]},
+        {"first_name": "bob", "emails": ["bob@python.com", "bob@www.com"]},
+    ], "start_time": "2022-07-11T13:00:00.000000Z"},
+    {"workers": [
+        {"first_name": "eve", "emails": ["eve@www.com"]},
+        {"first_name": "fred", "emails": []},
+    ], "start_time": "2022-07-11T21:00:00.000000Z"},
+]
