@@ -126,7 +126,7 @@ message Shift {
 >>> df = pdbuf.proto_normalize(shifts)
 >>> workers = pdbuf.proto_explode(shifts, "workers")
 >>> emails = pdbuf.proto_explode(shifts, "workers.emails")
->>> df.join(workers.join(emails))
+>>> df.join(workers).join(emails)
                    start_time first_name          emails
   workers
 0 0       2022-07-11 13:00:00      alice   alice@www.com
