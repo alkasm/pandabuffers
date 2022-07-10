@@ -117,11 +117,11 @@ message Shift {
 ...     {"workers": [
 ...         {"firstName": "alice", "emails": ["alice@www.com"]},
 ...         {"firstName": "bob", "emails": ["bob@python.com", "bob@www.com"]},
-...     ], "start_time": "2022-07-11T13:00:00.000000Z"},
+...     ], "startTime": "2022-07-11T13:00:00.000000Z"},
 ...     {"workers": [
 ...         {"firstName": "eve", "emails": ["eve@www.com"]},
 ...         {"firstName": "fred", "emails": []},
-...     ], "start_time": "2022-07-11T21:00:00.000000Z"},
+...     ], "startTime": "2022-07-11T21:00:00.000000Z"},
 ... ]
 >>> df = pdbuf.proto_normalize(shifts)
 >>> workers = pdbuf.proto_explode(shifts, "workers")
