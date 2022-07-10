@@ -23,7 +23,8 @@ Create pandas DataFrames from protobufs.
 Todos:
 - [ ] Basic `proto_normalize()` implementation using `MessageToDict(ParseDict(d), **options)`
 - [ ] Basic `proto_explode()` with named indexes (first index as `""`?)
-- [ ] Decide how to handle field detection (e.g. `wrappers.proto`)
+- [ ] Decide how to handle nested message detection (e.g. `wrappers.proto`)
+- [ ] Decide how to handle oneofs
 - [ ] Handle binary messages
 - [ ] Remove the proto hop with dict inputs
 
